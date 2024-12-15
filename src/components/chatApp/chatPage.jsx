@@ -113,28 +113,29 @@ const chatPage = () => {
                 </div>
                 <button onClick={() => { navigate("/"); toast.success("Successfully Logout!"); }} className='bg-red-500 rounded-md cursor-pointer hover:bg-green-500 px-4 py-2'>Logout</button>
             </nav>
-
+    
             <div className="flex flex-col h-screen pt-[72px] pb-[90px]">
                 <main className="h-[90vh] mx-20 overflow-auto p-4 bg-gradient-to-b from-pink-800/20 to-white/30 rounded-lg z-10">
                     {message.map((msg, key) => (
-                        <div key={key} className={`flex ${msg.sender === user ? "justify-end" : "justify-start"}`}>
-                            <div className={`border bg-white/30 px-3 py-2 w-fit mb-2 rounded-lg ${msg.sender === user ? "bg-white/30" : "bg-pink-800/20"}`}>
-                                <p className='font-serif font-bold'>{msg.sender}</p>
+                        <div key={key} className={`flex ${msg.senderId === user ? "justify-end" : "justify-start"}`}>
+                            <div className={`border bg-white/30 px-3 py-2 w-fit mb-2 rounded-lg ${msg.senderId === user ? "bg-white/30 rounded-lg" : "bg-pink-200 rounded-lg"}`}>
+                                <p className='font-serif font-bold'>{msg.senderId}</p>
                                 <p className='font-serif'>{msg.content}</p>
+                                <span className='text-gray-500 text-xs'>{new Date(msg.timestamp).toLocaleString()}</span>
                             </div>
                         </div>
                     ))}
                     <div ref={boxRef}></div>
                 </main>
             </div>
-
+    
             <footer className="bg-white/30 p-4 fixed bottom-2 inset-x-0 flex items-center rounded-xl mx-auto w-full max-w-screen-md">
                 <div className="flex w-full items-center space-x-2">
                     <input
                         value={input}
                         onChange={(e) => setInput(e.target.value)}
                         onKeyDown={(e) => {
-                            if(e.key === "Enter"){
+                            if (e.key === "Enter") {
                                 e.preventDefault();
                                 sendMessage();
                             }
@@ -149,6 +150,7 @@ const chatPage = () => {
             </footer>
         </div>
     );
+    
 };
 
 export default chatPage;
