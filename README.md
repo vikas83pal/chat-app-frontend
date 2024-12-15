@@ -45,9 +45,9 @@ A full-stack real-time chat application built with **React** for the frontend an
 
 Here are some screenshots of the project:
 
-![Screenshot 1](./assets/ss1.png)
-![Screenshot 2](./assets/ss3.png)
-![Screenshot 2](./assets/ss2.png)
+![Screenshot 1](/src/assets/ss1.png)
+![Screenshot 2](/src/assets/ss3.png)
+![Screenshot 3](/src/assets/ss2.png)
 
 
 ## Demo
@@ -58,8 +58,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-<<<<<<< HEAD
 Feel free to modify the sections as per your requirements. 
-=======
-Feel free to modify the sections as per your requirements. 
->>>>>>> 5d5b1ff5c4d515c0aa8c7336bc63e7ad4236f4d9
