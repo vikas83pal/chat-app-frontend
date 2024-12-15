@@ -58,4 +58,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
+<<<<<<< HEAD
 Feel free to modify the sections as per your requirements. 
+=======
+Feel free to modify the sections as per your requirements. 
+>>>>>>> 5d5b1ff5c4d515c0aa8c7336bc63e7ad4236f4d9
